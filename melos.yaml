@@ -1,0 +1,15 @@
+name: pokedex
+
+packages:
+  - design_system/**
+  - pokedex/**
+  - pokemon_dependencies/**
+
+scripts:
+  get:
+    run: melos exec -- flutter pub get
+    description: Run `flutter pub get` in all packages.
+
+  clean:
+    run: melos exec -- flutter clean
+    description: Run `flutter clean` in all packages.

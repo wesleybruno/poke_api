@@ -1,0 +1,1 @@
+export 'fetch_pokemon_list_params.dart';
