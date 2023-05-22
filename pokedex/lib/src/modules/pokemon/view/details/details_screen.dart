@@ -56,8 +56,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       SizedBox(
                         height: 16.h,
                       ),
-                      Text(
-                        'About',
+                      NullableTextWidget(
+                        text: AppLocalizations.of(context)?.about,
                         style: context.textTheme.subTitle1.copyWith(
                           color: widget
                               .args.pokemonDetailsEntity.types.first.color,
@@ -81,8 +81,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       SizedBox(
                         height: 16.h,
                       ),
-                      Text(
-                        'Base Status',
+                      NullableTextWidget(
+                        text: AppLocalizations.of(context)?.baseStatus,
                         style: context.textTheme.subTitle1.copyWith(
                           color: widget
                               .args.pokemonDetailsEntity.types.first.color,
@@ -137,7 +137,6 @@ class _HorizontalMainInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      //  width: 312.w,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -164,8 +163,8 @@ class _HorizontalMainInfo extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              Text(
-                'Weight',
+              NullableTextWidget(
+                text: AppLocalizations.of(context)?.weight,
                 style: context.textTheme.caption2,
               ),
             ],
@@ -202,8 +201,8 @@ class _HorizontalMainInfo extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              Text(
-                'Height',
+              NullableTextWidget(
+                text: AppLocalizations.of(context)?.height,
                 style: context.textTheme.caption2,
               ),
             ],
@@ -225,8 +224,8 @@ class _HorizontalMainInfo extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              Text(
-                'Moves',
+              NullableTextWidget(
+                text: AppLocalizations.of(context)?.moves,
                 style: context.textTheme.caption2,
               ),
             ],
@@ -410,9 +409,8 @@ class _AppBar extends StatelessWidget {
         Text(
           pokemonDetailsEntity.name,
           style: context.textTheme.headline.copyWith(
-            color: AppColor.defaultWhite,
-            leadingDistribution: TextLeadingDistribution.even
-          ),
+              color: AppColor.defaultWhite,
+              leadingDistribution: TextLeadingDistribution.even),
         ),
         const Spacer(),
         Text(

@@ -5,3 +5,4 @@ export 'network_image/network_image.dart';
 export 'radio_button/radio_button.dart';
 export 'shimmer/shimmer.dart';
 export 'text_field/text_field.dart';
+export 'nullable_text/nullable_text.dart';

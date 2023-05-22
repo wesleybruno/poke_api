@@ -93,9 +93,8 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             elevation: 0,
             backgroundColor: AppColor.primaryColor,
-            title: Text(
-              //TODO(refactor): isolate to string files
-              'Pokedéx',
+            title: NullableTextWidget(
+              text: AppLocalizations.of(context)?.appTitle,
               style: context.textTheme.headline,
             ),
             centerTitle: false,

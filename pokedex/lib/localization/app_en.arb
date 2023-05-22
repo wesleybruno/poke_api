@@ -1,0 +1,8 @@
+{
+  "appTitle": "Pokedex",
+  "about": "about",
+  "baseStatus" : "Status Base",
+  "weight" : "Weight",
+  "height" : "Height",
+  "moves" : "Move"
+}

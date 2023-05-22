@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/src/routes.dart';
 import 'package:design_system/design_system.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
+import 'package:pokedex/src/core/core.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           theme: AppTheme().makeTheme(),
           darkTheme: AppTheme().makeTheme(),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           onGenerateRoute: AppGenerateRouter.onGenerateRoutes,
           initialRoute: AppGenerateRouter.routeHome,
           debugShowCheckedModeBanner: false,
