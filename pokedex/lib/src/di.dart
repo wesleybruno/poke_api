@@ -8,8 +8,7 @@ class DependencyInjection {
   void _adapter() {
     _instance.registerLazySingleton<Dio>(
       () => CustomDioClient.initialize(
-        //TODO(refactor): Isolate to json
-        baseUrl: 'https://pokeapi.co/api/v2',
+        baseUrl: const String.fromEnvironment("POKE_API_BASE_URL"),
       ),
     );
 

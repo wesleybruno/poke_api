@@ -5,64 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "design_system",
-            "cwd": "design_system",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "design_system (profile mode)",
-            "cwd": "design_system",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "design_system (release mode)",
-            "cwd": "design_system",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
             "name": "pokedex",
             "cwd": "pokedex",
             "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "pokedex (profile mode)",
-            "cwd": "pokedex",
-            "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "args": [
+                "--dart-define-from-file",
+                "env.json"
+            ]
         },
-        {
-            "name": "pokedex (release mode)",
-            "cwd": "pokedex",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "pokemom_dependencies",
-            "cwd": "pokedex/packages/pokemom_dependencies",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "pokemom_dependencies (profile mode)",
-            "cwd": "pokedex/packages/pokemom_dependencies",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "pokemom_dependencies (release mode)",
-            "cwd": "pokedex/packages/pokemom_dependencies",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
     ]
 }

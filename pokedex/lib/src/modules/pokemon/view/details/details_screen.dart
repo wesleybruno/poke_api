@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/src/core/core.dart';
 import 'package:pokedex/src/modules/modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class DetailsScreenArgs {
   DetailsScreenArgs({

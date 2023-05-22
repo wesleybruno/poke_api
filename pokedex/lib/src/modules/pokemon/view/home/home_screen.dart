@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
               style: context.textTheme.headline,
             ),
             centerTitle: false,
-            leadingWidth: 80,
+            leadingWidth: 60,
             leading: Padding(
               padding: EdgeInsets.only(top: 8.h),
               child: const Icon(
