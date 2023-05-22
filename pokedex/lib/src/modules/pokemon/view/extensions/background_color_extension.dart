@@ -1,6 +1,7 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/src/modules/modules.dart';
+
+import '../../../modules.dart';
 
 extension BackgroundColorExtension on PokemonTypes {
   Color get color {

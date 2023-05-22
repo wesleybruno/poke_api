@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls
+
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
 import './http.dart';

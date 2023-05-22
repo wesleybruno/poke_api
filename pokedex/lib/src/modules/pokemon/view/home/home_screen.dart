@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:design_system/design_system.dart';
-import 'package:pokedex/src/core/core.dart';
-import 'package:pokedex/src/modules/modules.dart';
-import 'package:pokedex/src/routes.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
+
+import '../../../../core/core.dart';
+import '../../../modules.dart';
+import '../../../../routes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
-    super.key,
     required this.viewModel,
+    super.key,
   });
 
   final HomeScreenViewModel viewModel;
@@ -45,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _goToDetailsScreen(
-      PokemonDetailsEntity pokemonDetailsEntity) async {
+    PokemonDetailsEntity pokemonDetailsEntity,
+  ) async {
     await Navigator.of(context).pushNamed(
       AppGenerateRouter.routeDetails,
       arguments: DetailsScreenArgs(
@@ -142,41 +144,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               controller: _scrollController,
                               child: Column(
                                 children: [
-                                  GridView.builder(
-                                    shrinkWrap: true,
-                                    physics:
-                                        const NeverScrollableScrollPhysics(),
-                                    gridDelegate:
-                                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                                      maxCrossAxisExtent: 160,
-                                      childAspectRatio: 1,
-                                      crossAxisSpacing: 0,
-                                      mainAxisSpacing: 0,
-                                    ),
-                                    itemCount: state.filteredList.length,
-                                    itemBuilder: (ctx, index) {
-                                      return CardWidget(
-                                        onTap: () => _fetchPokemonDetails(
-                                            state.filteredList[index]),
-                                        placeholderImage: NetWorkImagewidget(
-                                          imageUrl: state
-                                              .filteredList[index].avatarUrl,
-                                          loadingWidget: ShimmerWidget(
-                                            child: Container(
-                                              width: 20,
-                                              height: 20,
-                                              decoration: const BoxDecoration(
-                                                shape: BoxShape.circle,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        hint:
-                                            '#${state.filteredList[index].id}',
-                                        description:
-                                            state.filteredList[index].name,
-                                      );
-                                    },
+                                  _MainWidget(
+                                    listPokemon: state.filteredList,
+                                    onTap: _fetchPokemonDetails,
                                   ),
                                   if (state.loadingMore ?? false)
                                     const Padding(
@@ -196,6 +166,50 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+        );
+      },
+    );
+  }
+}
+
+class _MainWidget extends StatelessWidget {
+  const _MainWidget({
+    required this.listPokemon,
+    required this.onTap,
+  });
+
+  final List<PokemonEntity> listPokemon;
+  final ValueChanged<PokemonEntity> onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 160,
+        childAspectRatio: 1,
+        crossAxisSpacing: 0,
+        mainAxisSpacing: 0,
+      ),
+      itemCount: listPokemon.length,
+      itemBuilder: (ctx, index) {
+        return CardWidget(
+          onTap: () => onTap(listPokemon[index]),
+          placeholderImage: NetWorkImagewidget(
+            imageUrl: listPokemon[index].avatarUrl,
+            loadingWidget: ShimmerWidget(
+              child: Container(
+                width: 20,
+                height: 20,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ),
+          ),
+          hint: '#${listPokemon[index].id}',
+          description: listPokemon[index].name,
         );
       },
     );

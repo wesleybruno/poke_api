@@ -1,5 +1,5 @@
-import 'package:pokedex/src/core/core.dart';
-import 'package:pokedex/src/modules/pokemon/data/data.dart';
+import '../../../../core/core.dart';
+import '../data.dart';
 
 abstract class IPokemonDatasource {
   Future<FetchPokemonListResponse> fetchListPokemon(

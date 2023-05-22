@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pokedex/src/di.dart';
 
+import 'src/di.dart';
 import 'src/app.dart';
 
 void main() async {

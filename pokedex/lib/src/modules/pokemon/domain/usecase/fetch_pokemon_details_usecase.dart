@@ -1,4 +1,4 @@
-import 'package:pokedex/src/modules/modules.dart';
+import '../../../modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
 abstract class IFetchPokemonDetailsUsecase {

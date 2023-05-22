@@ -1,6 +1,6 @@
-import 'package:pokedex/src/core/http/interceptor/log_interceptor.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
+import 'interceptor/log_interceptor.dart';
 class CustomDioClient {
   CustomDioClient._();
 

@@ -1,4 +1,4 @@
-import 'package:pokedex/src/modules/pokemon/domain/entity/entity.dart';
+import 'entity.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
 class PokemonDetailsEntity extends Equatable {

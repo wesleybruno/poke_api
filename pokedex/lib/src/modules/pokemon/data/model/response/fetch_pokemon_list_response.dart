@@ -1,11 +1,11 @@
-import 'package:pokedex/src/modules/pokemon/domain/domain.dart';
+import '../../../domain/domain.dart';
 
 class FetchPokemonListResponse {
   FetchPokemonListResponse({
     required this.count,
+    required this.results,
     this.next,
     this.previous,
-    required this.results,
   });
   final int count;
   final String? next;

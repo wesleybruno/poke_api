@@ -1,4 +1,4 @@
-import 'package:pokedex/src/modules/pokemon/domain/entity/entity.dart';
+import './../../../domain/domain.dart';
 
 PokemonTypes _convertPokemonType(String type) {
   switch (type) {
@@ -59,8 +59,12 @@ class FetchPokemonDetailsResponse extends PokemonDetailsEntity {
           size: height.toString(),
           skills: abilities.map((e) => e.ability.name).toList(),
           stats: statsModel
-              .map((e) =>
-                  PokemonStats(key: e.stat.name, value: e.baseStat.toDouble()))
+              .map(
+                (e) => PokemonStats(
+                  key: e.stat.name,
+                  value: e.baseStat.toDouble(),
+                ),
+              )
               .toList(),
           types:
               typesModel.map((e) => _convertPokemonType(e.type.name)).toList(),

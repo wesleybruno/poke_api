@@ -1,8 +1,10 @@
-import 'package:pokedex/src/modules/modules.dart';
+import '../../../modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
 abstract class IFetchPokemonListUsecase {
-  Future<Either<PokemonFailure, List<PokemonEntity>>> call(FetchPokemonListUsecaseParams params);
+  Future<Either<PokemonFailure, List<PokemonEntity>>> call(
+    FetchPokemonListUsecaseParams params,
+  );
 }
 
 class FetchPokemonListUsecase implements IFetchPokemonListUsecase {
@@ -12,7 +14,9 @@ class FetchPokemonListUsecase implements IFetchPokemonListUsecase {
   final IPokemomRepository _repository;
 
   @override
-  Future<Either<PokemonFailure, List<PokemonEntity>>> call(FetchPokemonListUsecaseParams params) {
+  Future<Either<PokemonFailure, List<PokemonEntity>>> call(
+    FetchPokemonListUsecaseParams params,
+  ) {
     return _repository.fetchListPokemon(params);
   }
 }
@@ -25,5 +29,4 @@ class FetchPokemonListUsecaseParams {
 
   final int offset;
   final int limit;
- 
 }

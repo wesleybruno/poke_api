@@ -1,8 +1,9 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/src/core/core.dart';
-import 'package:pokedex/src/modules/modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
+
+import '../../../../core/core.dart';
+import '../../../modules.dart';
 
 class DetailsScreenArgs {
   DetailsScreenArgs({
@@ -14,8 +15,8 @@ class DetailsScreenArgs {
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({
-    super.key,
     required this.args,
+    super.key,
   });
 
   final DetailsScreenArgs args;
@@ -409,8 +410,9 @@ class _AppBar extends StatelessWidget {
         Text(
           pokemonDetailsEntity.name,
           style: context.textTheme.headline.copyWith(
-              color: AppColor.defaultWhite,
-              leadingDistribution: TextLeadingDistribution.even),
+            color: AppColor.defaultWhite,
+            leadingDistribution: TextLeadingDistribution.even,
+          ),
         ),
         const Spacer(),
         Text(

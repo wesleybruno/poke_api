@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls
+
 import 'dart:convert';
 import 'package:flutter/rendering.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
@@ -78,7 +80,8 @@ class CustomLogInterceptor implements Interceptor {
 
     if (params != null) {
       params.forEach(
-          (key, dynamic value) => queryParams = '$queryParams$key=$value&');
+        (key, dynamic value) => queryParams = '$queryParams$key=$value&',
+      );
     }
 
     return queryParams;

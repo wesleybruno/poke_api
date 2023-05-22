@@ -1,5 +1,5 @@
-import 'package:pokedex/src/core/core.dart';
-import 'package:pokedex/src/modules/modules.dart';
+import 'core/core.dart';
+import 'modules/modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
 class DependencyInjection {
@@ -8,7 +8,7 @@ class DependencyInjection {
   void _adapter() {
     _instance.registerLazySingleton<Dio>(
       () => CustomDioClient.initialize(
-        baseUrl: const String.fromEnvironment("POKE_API_BASE_URL"),
+        baseUrl: const String.fromEnvironment('POKE_API_BASE_URL'),
       ),
     );
 

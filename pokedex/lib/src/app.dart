@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/src/routes.dart';
 import 'package:design_system/design_system.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
-import 'package:pokedex/src/core/core.dart';
+
+import 'routes.dart';
+import 'core/core.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({

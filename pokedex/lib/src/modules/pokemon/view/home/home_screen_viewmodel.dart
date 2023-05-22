@@ -1,6 +1,6 @@
-import 'package:pokedex/src/modules/modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
+import '../../../modules.dart';
 class HomeScreenViewModel extends Cubit<HomeScreenState> {
   HomeScreenViewModel({
     required IFetchPokemonListUsecase fetchPokemonListUsecase,

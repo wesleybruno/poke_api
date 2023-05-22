@@ -1,5 +1,5 @@
-import 'package:pokedex/src/core/core.dart';
-import 'package:pokedex/src/modules/modules.dart';
+import '../../../../core/core.dart';
+import '../../../modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
 class PokemomRepository implements IPokemomRepository {

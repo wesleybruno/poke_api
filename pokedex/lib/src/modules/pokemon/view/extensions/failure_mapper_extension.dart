@@ -1,4 +1,4 @@
-import 'package:pokedex/src/modules/modules.dart';
+import '../../../modules.dart';
 
 extension FailureMapperExtension on PokemonFailure {
   String get errorMessage {
