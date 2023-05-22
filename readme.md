@@ -33,6 +33,10 @@ bash
 
 ``` 
 melos get
+
+ou 
+
+melos bs
 ```
 
 ## Problemas na execução
