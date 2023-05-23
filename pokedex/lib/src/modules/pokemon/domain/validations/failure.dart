@@ -1,9 +1,9 @@
 abstract class PokemonFailure {}
 
-class NotFound extends PokemonFailure {}
+class NotFoundFailure extends PokemonFailure {}
 
-class Unexpected extends PokemonFailure {}
+class UnexpectedFailure extends PokemonFailure {}
 
-class TimeOut extends PokemonFailure {}
+class TimeOutFailure extends PokemonFailure {}
 
-class Unauthorized extends PokemonFailure {}
+class UnauthorizedFailure extends PokemonFailure {}

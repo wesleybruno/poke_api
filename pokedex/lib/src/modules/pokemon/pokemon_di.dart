@@ -14,8 +14,8 @@ class PokemonDi {
   }
 
   void _repository() {
-    _instance.registerLazySingleton<IPokemomRepository>(
-      () => PokemomRepository(
+    _instance.registerLazySingleton<IPokemonRepository>(
+      () => PokemonRepository(
         datasource: _instance.get<IPokemonDatasource>(),
       ),
     );
@@ -24,13 +24,13 @@ class PokemonDi {
   void _usecase() {
     _instance.registerLazySingleton<IFetchPokemonDetailsUsecase>(
       () => FetchPokemonDetailsUsecase(
-        repository: _instance.get<IPokemomRepository>(),
+        repository: _instance.get<IPokemonRepository>(),
       ),
     );
 
     _instance.registerLazySingleton<IFetchPokemonListUsecase>(
       () => FetchPokemonListUsecase(
-        repository: _instance.get<IPokemomRepository>(),
+        repository: _instance.get<IPokemonRepository>(),
       ),
     );
   }

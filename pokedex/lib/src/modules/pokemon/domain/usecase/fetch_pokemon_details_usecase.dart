@@ -9,9 +9,9 @@ abstract class IFetchPokemonDetailsUsecase {
 
 class FetchPokemonDetailsUsecase implements IFetchPokemonDetailsUsecase {
   FetchPokemonDetailsUsecase({
-    required IPokemomRepository repository,
+    required IPokemonRepository repository,
   }) : _repository = repository;
-  final IPokemomRepository _repository;
+  final IPokemonRepository _repository;
 
   @override
   Future<Either<PokemonFailure, PokemonDetailsEntity>> call(

@@ -18,6 +18,7 @@ dependencies:
   flutter_screenutil: ^5.5.3+2
   get_it: ^7.6.0
   intl: ^0.17.0
+  mocktail: ^0.3.0
 
 
 dev_dependencies:

@@ -2,8 +2,8 @@ import '../../../../core/core.dart';
 import '../../../modules.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
-class PokemomRepository implements IPokemomRepository {
-  PokemomRepository({
+class PokemonRepository implements IPokemonRepository {
+  PokemonRepository({
     required IPokemonDatasource datasource,
   }) : _datasource = datasource;
 
@@ -23,13 +23,13 @@ class PokemomRepository implements IPokemomRepository {
 
       return Right(result.results);
     } on UnauthorizedException catch (_) {
-      return Left(Unauthorized());
+      return Left(UnauthorizedFailure());
     } on NotFoundException catch (_) {
-      return Left(NotFound());
+      return Left(NotFoundFailure());
     } on TimeoutException catch (_) {
-      return Left(TimeOut());
+      return Left(TimeOutFailure());
     } on Exception catch (_) {
-      return Left(Unexpected());
+      return Left(UnexpectedFailure());
     }
   }
 
@@ -45,13 +45,13 @@ class PokemomRepository implements IPokemomRepository {
 
       return Right(result);
     } on UnauthorizedException catch (_) {
-      return Left(Unauthorized());
+      return Left(UnauthorizedFailure());
     } on NotFoundException catch (_) {
-      return Left(NotFound());
+      return Left(NotFoundFailure());
     } on TimeoutException catch (_) {
-      return Left(TimeOut());
+      return Left(TimeOutFailure());
     } on Exception catch (_) {
-      return Left(Unexpected());
+      return Left(UnexpectedFailure());
     }
   }
 }

@@ -7,4 +7,5 @@ export 'package:either_dart/either.dart';
 export 'package:get_it/get_it.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:intl/intl.dart';
+export 'package:mocktail/mocktail.dart';
 

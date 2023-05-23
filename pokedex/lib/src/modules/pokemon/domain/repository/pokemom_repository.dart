@@ -1,7 +1,7 @@
 import '../domain.dart';
 import 'package:pokemon_dependencies/pokemon_dependencies.dart';
 
-abstract class IPokemomRepository {
+abstract class IPokemonRepository {
   Future<Either<PokemonFailure, List<PokemonEntity>>> fetchListPokemon(
     FetchPokemonListUsecaseParams params,
   );

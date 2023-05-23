@@ -2,7 +2,7 @@ import '../../../modules.dart';
 
 extension FailureMapperExtension on PokemonFailure {
   String get errorMessage {
-    if (this is NotFound) {
+    if (this is NotFoundFailure) {
       return 'Pokemon não encontrado';
     }
 
